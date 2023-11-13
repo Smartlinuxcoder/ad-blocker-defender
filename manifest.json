@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Remove Element Extension",
+  "version": "1.0",
+  "description": "An extension to remove a specific element from web pages.",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Remove Element Extension",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
